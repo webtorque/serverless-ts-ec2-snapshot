@@ -1,0 +1,31 @@
+{
+    "name": "serverless-ts-ec2-snapshot",
+    "version": "0.0.0",
+    "description": "Simple Serverless project to deploy a function that automatically create snapshot of EC disks",
+    "scripts": {
+        "test": "mocha dist/test",
+        "compile": "rm -rf dist ; tsc",
+        "deploy": "serverless deploy",
+        "predeploy": "npm run compile",
+        "pretest": "npm run compile",
+        "predeployFn": "npm run compile"
+    },
+    "author": "Maxime Rainville <webmaster@syrp.co.nz> (https://syrp.co.nz)",
+    "license": "MIT",
+    "dependencies": {
+        "adf-builder": "^3.0.1",
+        "aws-lambda": "^0.1.2",
+        "aws-sdk": "^2.188.0",
+        "request": "^2.83.0",
+        "request-promise": "^4.2.2",
+        "request-promise-native": "^1.0.5"
+    },
+    "devDependencies": {
+        "@types/aws-lambda": "0.0.31",
+        "@djabry/aws-sdk-typescript": "0.0.11",
+        "@types/chai": "^3.4.34",
+        "@types/node": "^7.0.5",
+        "aws-sdk-mock": "^1.6.1",
+        "chai": "^3.5.0"
+    }
+}

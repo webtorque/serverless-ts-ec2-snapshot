@@ -1,0 +1,6 @@
+{
+    "queryStringParameters": { },
+    "path": "/hello-world",
+    "headers": {},
+    "httpMethod": "GET"
+}

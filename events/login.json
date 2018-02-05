@@ -1,0 +1,7 @@
+{
+    "queryStringParameters": { },
+    "path": "/login",
+    "headers": {},
+    "httpMethod": "POST",
+    "body": "{\"user\":\"bob\",\"password\":\"bob\"}"
+}
