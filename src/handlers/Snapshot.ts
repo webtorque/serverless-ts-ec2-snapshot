@@ -3,7 +3,9 @@ import { EC2 } from 'aws-sdk'
 import { getVolumes, creatSnapshot, Volume } from '../Volume'
 import { sendNotification, sendFailure } from '../Notification'
 
-
+/**
+ * Entry point for the app.
+ */
 export const handler:Handler = (event: any, context: Context, callback: Callback) => {
     // Get a list of volumes
     const volumes = getVolumes()
@@ -28,8 +30,7 @@ export const handler:Handler = (event: any, context: Context, callback: Callback
 }
 /**
  * When a Snapshot request is succesfully, return true.
- * @param  true [description]
- * @return      [description]
+ * @param snapshot
  */
 const notifyOfSnapshot = (snapshot: EC2.Types.Snapshot): Promise<boolean> => {
     return Promise.resolve(true)
